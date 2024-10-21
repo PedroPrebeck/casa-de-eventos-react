@@ -23,7 +23,7 @@ const AdicionarEvento = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/eventos', evento);
+            const response = await axios.post('http://localhost:5000/eventos', evento);
             console.log(response.data);
             alert('Evento adicionado com sucesso!');
         } catch (error) {

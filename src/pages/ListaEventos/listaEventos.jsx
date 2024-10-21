@@ -25,7 +25,7 @@ function ListaEventos() {
 
     const excluirEvento = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/eventos/${id}`);
+            await axios.delete(`http://localhost:5000/eventos/${id}`);
             const eventosFiltrados = eventos.filter(evento => evento.id !== id);
             setEventos(eventosFiltrados);
             toast.success('Evento removido com sucesso!', {
@@ -43,7 +43,7 @@ function ListaEventos() {
     useEffect(() => {
         const listarEventos = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/eventos');
+                const response = await axios.get('http://localhost:5000/eventos');
                 setEventos(response.data);
             } catch (error) {
                 console.error('Erro ao buscar eventos', error);

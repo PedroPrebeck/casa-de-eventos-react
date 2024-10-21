@@ -34,7 +34,7 @@ const Login = () => {
     const EfetuarLogin = async () => {
         try {
             // CHAMADA NA API DE USUÁRIOS
-            const response = await axios.get('http://localhost:3000/usuarios');
+            const response = await axios.get('http://localhost:5000/usuarios');
             const usuarios = response.data;
             // VERIFICA SE USUÁRIO E SENHA FORAM ENCONTRADOS
             const usuarioEncontrado = usuarios.find(usuario => usuario.nome === nome && usuario.senha === senha);

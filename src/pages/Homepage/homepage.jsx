@@ -13,7 +13,7 @@ function Homepage() {
     useEffect(() => {
         const listarEventos = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/eventos');
+                const response = await axios.get('http://localhost:5000/eventos');
                 setEventos(response.data);
             } catch (error) {
                 console.error('Erro ao buscar eventos', error);
